@@ -1,9 +1,25 @@
-import React from 'react';
+import { useState } from "react";
+import { toast } from "react-toastify";
 
-const Card = ({ products }) => {
-  // console.log(products, "card")
+
+
+const Card = ({ products, setCount, }) => {
+  const [clicked, setClicked] = useState(false);
+
+  const handleAddToCart = () => {
+      
+    toast.success(`${products.name} added to cart`);
+    if (clicked) return;
+    setCount(count => count + 1);
+    setClicked(true);
+  }
+
+
+
+
+
   return (
-    <div className="card w-96 bg-base-100 shadow-stone-400 rounded-md mb-10 ">
+    <div className="card w-96 bg-base-100 shadow-stone-400 rounded-md mb-5 ">
       <div className="card-body   hover:bg-blue-100 
        hover:shadow-lg 0 transition-shadow relative
        ">
@@ -44,7 +60,11 @@ const Card = ({ products }) => {
 
         </ul>
         <div className="mt-6">
-          <button className="btn btn-primary  btn-block shadow shadow-gray-700">Buy Now</button>
+          <button className={`btn btn-block rounded-full btn-primary shadow shadow-gray-700 ${
+    clicked ? "bg-green-500 text-white" : ""
+  }`}
+            onClick={handleAddToCart}
+            disabled={clicked}> {clicked ? "Added-to-Cart" : "Buy Now"}</button>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../../assets/shopping-cart-01.png'
-const Navbar = () => {
+const Navbar = ({ count }) => {
 
 
   return (
@@ -53,7 +53,7 @@ const Navbar = () => {
         <div className='px-2 shadow p-2
         shadow-b shadow-gray-200 rounded-full'>
           
-            <p className='text-white px-2  rounded-full bg-red-600 '>0</p>
+            <p className='text-white px-2  rounded-full bg-red-600 '>{count}</p>
         
           <img src={logo} className=' ' alt="" />
         </div>

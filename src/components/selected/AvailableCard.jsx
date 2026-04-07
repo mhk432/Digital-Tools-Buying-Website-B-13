@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from '../ui-card/Card';
 
-const AvailableCard = ({products}) => {
-    // console.log(products, "available card")
+const AvailableCard = ({products ,count, setCount}) => {
+    
     return (
         <div className='px-20'>
 
@@ -12,7 +12,8 @@ const AvailableCard = ({products}) => {
                  
                     
                  
-                return <Card key={products.id}  products={products}></Card>
+                return <Card key={products.id}
+                   products={products} setCount={setCount} count={count}></Card>
                   })
                }
             </div>

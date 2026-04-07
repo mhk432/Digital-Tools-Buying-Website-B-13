@@ -3,7 +3,7 @@ import AvailableCard from '../selected/AvailableCard';
 import SelactedCard from '../selected/SelactedCard';
 
 
-const Products = ({productPromise}) => {
+const Products = ({productPromise ,count, setCount}) => {
     const data=use(productPromise);
     const products = data.products;
 
@@ -20,19 +20,21 @@ const Products = ({productPromise}) => {
                     <button
                         onClick={() => setselectedType('available')}
                         className={`btn ${selectedType ===
-                            'available' ? "bg-gradient-to-r from-[#4F39F6] to-[#9514FA]" :
-                            " text-black  "} 
-                  rounded-l-full font-bold`}>Products</button>
+                            'available' ? "bg-gradient-to-r                           from-[#4F39F6] to-[#9514FA]" :
+                            " text-white bg-gray-400 " } 
+                  rounded-l-full font-bold text-white`}>Products</button>
 
                     <button
                         onClick={() => setselectedType('Selected')} className={`btn
- ${selectedType === 'Selected' ? "bg-gradient-to-r from-[#4F39F6] to-[#9514FA]" : "  text-black"}  
-                  rounded-r-full`}>cart ()</button>
+             ${selectedType === 'Selected'
+        ? "bg-gradient-to-r text-white from-[#4F39F6]  to-[#9514FA]" : " text-black"}  
+                  rounded-r-full font-bold text-blue-700`}>({count})/{products.length} Card</button>
                 </div>
             </div>
-            {selectedType === "available" ? <AvailableCard products={products}>
+            {selectedType === "available" ? <AvailableCard
+            count={count} setCount={setCount} products={products}>
 
-            </AvailableCard> :<SelactedCard></SelactedCard>}
+            </AvailableCard > :<SelactedCard></SelactedCard>}
         </div>
 
 
