@@ -1,8 +1,10 @@
 
 import './App.css'
+import Card3section from './components/3cardsection/Card3section'
 import ExtraCard from './components/axtraCard/ExtraCard'
 import Banner from './components/banner/Banner'
 import Navbar from './components/navbar/Navbar'
+import Products from './components/products/Products'
 
 function App() {
   
@@ -13,8 +15,9 @@ function App() {
         <Navbar></Navbar>
         <Banner></Banner>
         <ExtraCard></ExtraCard>
-      
-          <h1 className=' text-3xl text-center my-5 font-bold'>Get started</h1>
+        <Products></Products>
+      <Card3section></Card3section>
+          
           
        
 

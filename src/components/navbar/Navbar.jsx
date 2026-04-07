@@ -50,14 +50,21 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end gap-4 p-5">
-        <div>
-          <p className='text-red-500 p-1 rounded-full '>0</p>
-          <img src={logo} className='' alt="" />
+        <div className='px-2 shadow p-2
+        shadow-b shadow-gray-200 rounded-full'>
+          
+            <p className='text-white px-2  rounded-full bg-red-600 '>0</p>
+        
+          <img src={logo} className=' ' alt="" />
         </div>
 
-        <p className='text-[16px] font-semibold text-[#101727] '>Login</p>
-        <a className="rounded-full p-2 bg-gradient-to-r 
-          text-white font-semibold
+        <button className='text-[16px] 
+        font-semibold text-[#101727] px-4 py-2 shadow 
+        shadow-b shadow-gray-200 
+        rounded-full hover-3d '>Login</button>
+        <a className=" text-white font-semibold 
+        rounded-full p-2 bg-gradient-to-r 
+          
           from-[#4F39F6] to-[#9514FA] ">Get Started</a>
       </div>
     </div>
