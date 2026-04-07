@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import AvailableCard from '../selected/AvailableCard';
 import SelactedCard from '../selected/SelactedCard';
 
 
-const Products = () => {
+const Products = ({productPromise}) => {
+    const data=use(productPromise);
+    const products = data.products;
 
     const [selectedType, setselectedType] = useState('available');
     return (
@@ -19,16 +21,18 @@ const Products = () => {
                         onClick={() => setselectedType('available')}
                         className={`btn ${selectedType ===
                             'available' ? "bg-gradient-to-r from-[#4F39F6] to-[#9514FA]" :
-                            " text-black shadow shadow-b shadow-gray-500 "} 
+                            " text-black  "} 
                   rounded-l-full font-bold`}>Products</button>
 
                     <button
                         onClick={() => setselectedType('Selected')} className={`btn
- ${selectedType === 'Selected' ? "bg-gradient-to-r from-[#4F39F6] to-[#9514FA]" : "shadow shadow-b shadow-gray-500  text-black"}  
-                  rounded-r-full`}>cart</button>
+ ${selectedType === 'Selected' ? "bg-gradient-to-r from-[#4F39F6] to-[#9514FA]" : "  text-black"}  
+                  rounded-r-full`}>cart ()</button>
                 </div>
             </div>
-            {selectedType === "available" ? <AvailableCard></AvailableCard> :<SelactedCard></SelactedCard>}
+            {selectedType === "available" ? <AvailableCard products={products}>
+
+            </AvailableCard> :<SelactedCard></SelactedCard>}
         </div>
 
 

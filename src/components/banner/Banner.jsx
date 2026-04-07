@@ -13,13 +13,15 @@ const Banner = () => {
                     className="rounded-lg w-2/4 h-[700px]" />
                 
                 <div className='p-5 space-y-10   w-3/6'>
-                    <div className='bg-blue-50  rounded-full '>
-                        <p className='flex p-3 gap-1 ml-6 
-                        bg-gradient-to-r from-[#4F39F6] 
-                    to-[#7412be] 
-        bg-clip-text text-transparent rounded-full'>
-            <img src={Reactangele} alt="" /> New: AI-Powered Tools Available</p>
+                   
+
+                    <div>
+                        <button className="bg-blue-100 hover:bg-blue-200 transition flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium">
+                            <img src={Reactangele} alt="" className="w-4 h-4" />
+                            New: AI-Powered Tools Available
+                        </button>
                     </div>
+
                     <div className=''>
                         <h1 className="text-7xl font-extrabold  ">Supercharge Your <br /> Digital Workflow </h1>
                     <p className="py-6 ">
