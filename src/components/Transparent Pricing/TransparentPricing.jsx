@@ -2,7 +2,7 @@ import React from 'react';
 
 const TransparentPricing = () => {
     return (
-        <div className='mx-20 my-40 '>
+        <div className='mx-20 my-20 '>
 
             <div className='mx-auto text-center'>
 
@@ -12,10 +12,10 @@ const TransparentPricing = () => {
             </div>
 
             {/* 3card section */}
-            <div className='grid lg:grid-cols-3 md:grid-cols-2  gap-5 mt-6  '>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2  gap-5 mt-6   rounded-lg bg-base-200'>
 
-                <div className=''>
-                    <div className=" card w-full flex flex-col flex-1 rounded-3xl
+                <div className=' '>
+                    <div className=" shadow shadow-amber-200  card w-full  flex flex-col flex-1 rounded-3xl
                  h-[400px] bg-base-100 shadow-sm  ">
                         <div className="card-body  ">
 
@@ -45,8 +45,8 @@ const TransparentPricing = () => {
                 <div className=''>
                     <div className=''>
                         <div className="card rounded-3xl relative w-full flex flex-col flex-1 
-      h-[400px] bg-base-100 shadow-sm bg-gradient-to-r
-          from-[#4F39F6] to-[#9514FA]">
+             h-[400px] bg-base-100 shadow-sm bg-gradient-to-r
+            from-[#4F39F6] to-[#9514FA]">
 
                             {/* Top Center Badge */}
                             <span className="text-white badge badge-warning absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -84,7 +84,7 @@ const TransparentPricing = () => {
 
                 <div className=''>
                     <div className="card  w-full flex flex-col flex-1 h-[400px]
-   bg-base-100 shadow-sm rounded-3xl">
+                   bg-base-100 shadow-sm rounded-3xl">
 
                         {/* Top Center Badge */}
 

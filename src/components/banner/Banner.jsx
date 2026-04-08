@@ -16,9 +16,10 @@ const Banner = () => {
                    
 
                     <div>
-                        <button className="bg-blue-100 hover:bg-blue-200 transition flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium">
-                            <img src={Reactangele} alt="" className="w-4 h-4" />
-                            New: AI-Powered Tools Available
+                        <button className="   bg-blue-100 transition flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium">
+                            <img src={Reactangele} alt="" className="w-4 h-4 " />
+                           <span className='bg-gradient-to-r from-[#4F39F6] to-[#7412be] 
+        bg-clip-text text-transparent'> New: AI-Powered Tools Available</span>
                         </button>
                     </div>
 
