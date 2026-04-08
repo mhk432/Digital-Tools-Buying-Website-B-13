@@ -39,6 +39,8 @@ const Products = ({productPromise ,count, setCount, price}) => {
             count={count} setCount={setCount} products={products}
             selectedProducts={selectedProducts} setSelectedProducts={setSelectedProducts} >
                  </AvailableCard > :<SelactedCard price={price} count={count} 
+                  products={products}
+
             setCount={setCount}  selectedProducts={selectedProducts} 
             setSelectedProducts={setSelectedProducts} ></SelactedCard>}
         </div>

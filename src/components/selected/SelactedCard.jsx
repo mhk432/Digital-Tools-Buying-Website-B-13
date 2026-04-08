@@ -1,22 +1,54 @@
 import React from 'react';
 import { MdDelete } from 'react-icons/md';
+import { toast } from 'react-toastify';
+import emtyicon from '../../assets/portfolio.png'
 
-const SelactedCard = ({selectedProducts}) => {
-    console.log(selectedProducts);
+const SelactedCard = ({selectedProducts, setSelectedProducts,count, setCount}) => {
+    
+
+
      
+  const handeleDeleteSealctProduct = (product) =>{
+        toast.error(`${product.name} removed from card`), {
+            position: "top-left",
+            autoClose: 3000,}
+    const restProducts = selectedProducts.filter( (p) => p.id !== product.id);
+    setSelectedProducts(restProducts);
+    setCount(count - 1);
 
+  }
 
+  const handeleCheackOut = () => {
+    if(selectedProducts.length === 0){
+        toast.error("No products selected for checkout.")
+        
+    }
+        else{
+
+            toast.success("Checkout successful! Thank you for your purchase.")
+            setSelectedProducts("");
+            setCount(0);
+        }    
+
+   
+  }
 
     return (
         <div className='px-20'>
-            {
+            { selectedProducts.length === 0 ? 
+            <div className=' flex flex-col items-center gap-4 mt-20 mb-20 bg-gray-200
+             p-10 rounded-lg '>
+              <img src={emtyicon} alt="" />
+            <p className='text-center text-2xl font-bold'>No products selected yet.</p>
+            </div> :
                 selectedProducts.map((product,ind ) => {
+
 
          return <div key={ind} className='border-2
           border-gray-300 rounded-lg p-4 mb-6 flex items-center
            justify-between gap-4 bg-white shadow shadow-xl'>
                     <div className='flex items-center gap-4 p-4'>
-
+        
                       <div>
                         <p className='text-5xl'>{product.icon}</p>
                       </div>
@@ -26,12 +58,18 @@ const SelactedCard = ({selectedProducts}) => {
                    </div>
                     </div>
 
-                   <button className='btn  text-red-600 text-2xl bg-white rounded-full p-2'><MdDelete /></button>
+                   <button className='btn  text-red-600 text-2xl
+      bg-white rounded-full p-2' 
+       onClick={() => handeleDeleteSealctProduct(product)}><MdDelete /></button>
                 </div>
                 })}
              
              
+             <button className='bg-gradient-to-r text-white from-[#2110a3] 
+             to-[#9514FA]
+              btn btn-block rounded-full ' onClick={handeleCheackOut}>Proceed to Checkout</button>
         </div>
+
     );
 };
 
