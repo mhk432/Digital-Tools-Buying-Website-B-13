@@ -31,8 +31,9 @@ const Banner = () => {
                         Explore Products
                     </p>
                     <div className=' flex gap-2'>
-                        <button className="btn btn-primary bg-gradient-to-r 
-         rounded-full text-white font-semibold from-[#4F39F6] to-[#9514FA]">Get Started</button>
+                        <button className="btn btn-primary  
+         rounded-full text-white font-semibold bg-gradient-to-r
+          from-[#4F39F6] to-[#9514FA]">Get Started</button>
                         <button className='btn rounded-full border border-blue-400 bg-gradient-to-r from-[#4F39F6] to-[#7412be] 
         bg-clip-text text-transparent'><img src={playButton} alt="" /> Watch Demo</button>
                     </div>

@@ -26,12 +26,17 @@ const SelactedCard = ({selectedProducts, setSelectedProducts,count, setCount}) =
         else{
 
             toast.success("Checkout successful! Thank you for your purchase.")
-            setSelectedProducts("");
+            setSelectedProducts([]);
             setCount(0);
         }    
 
    
   }
+
+//   handle delete selected product and update count and show toast notification
+
+  const totalPrice = selectedProducts.reduce((total, product) =>
+     total + product.price, 0);
 
     return (
         <div className='px-20'>
@@ -64,7 +69,14 @@ const SelactedCard = ({selectedProducts, setSelectedProducts,count, setCount}) =
                 </div>
                 })}
              
-             
+             <div className="my-10 p-6 bg-white border-2
+              border-amber-400 rounded-2xl w-full ">
+                <div className="flex justify-between items-center text-3xl font-bold">
+                    <h3>Total Price:</h3>
+                    <h3 className="text-green-600">${totalPrice}</h3>
+                </div>
+            </div>
+
              <button className='bg-gradient-to-r text-white from-[#2110a3] 
              to-[#9514FA]
               btn btn-block rounded-full ' onClick={handeleCheackOut}>Proceed to Checkout</button>

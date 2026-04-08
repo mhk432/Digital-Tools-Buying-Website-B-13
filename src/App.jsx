@@ -7,6 +7,7 @@ import Banner from './components/banner/Banner'
 import Navbar from './components/navbar/Navbar'
 import Products from './components/products/Products'
 import { ToastContainer } from 'react-toastify'
+import TransparentPricing from './components/Transparent Pricing/TransparentPricing'
 
 
 
@@ -32,6 +33,7 @@ function App() {
      </Suspense>
 
       <Card3section></Card3section>
+      <TransparentPricing></TransparentPricing>
 
 
            <ToastContainer />

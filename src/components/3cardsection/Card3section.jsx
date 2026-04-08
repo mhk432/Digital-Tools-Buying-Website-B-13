@@ -6,7 +6,7 @@ import roketplayer from'../../assets/rocket.png' ;
 const Card3section = () => {
     return (
         <div>
-           <div className='mx-12 my-40'>
+           <div className='mx-12 my-10'>
 
             <div className='mx-auto text-center space-y-5'>
             <h1 className='text-5xl font-extrabold'>Get Started in 3 Steps</h1>
@@ -20,7 +20,8 @@ const Card3section = () => {
                     <div  className=' text-white flex justify-between'>
                         <p></p>
 
-                    <p className='bg-blue-500 px-2 rounded-full mr-5 mb-12'>1</p>
+                    <p className='bg-gradient-to-r
+          from-[#4F39F6] to-[#9514FA] px-4 rounded-full mr-5 mb-12'>1</p>
                     </div>
                     <div className='space-y-4 mx-auto flex 
                     flex-col justify-center items-center'>
@@ -39,7 +40,8 @@ const Card3section = () => {
                     <div  className=' text-white flex justify-between'>
                         <p></p>
 
-                    <p className='bg-blue-500 px-2 rounded-full mr-5 mb-12'>2</p>
+                    <p className='bg-gradient-to-r
+          from-[#4F39F6] to-[#9514FA] px-4 rounded-full mr-5 mb-12'>2</p>
                     </div>
                     <div className='space-y-4 mx-auto flex flex-col justify-center items-center'>
                         <img src={choosepRoduct} className='w-20 
@@ -56,9 +58,10 @@ const Card3section = () => {
                     <div  className=' text-white flex justify-between'>
                         <p></p>
 
-                    <p className='bg-blue-500 px-2 rounded-full mr-5 mb-12'>3</p>
+                    <p className='bg-gradient-to-r
+          from-[#4F39F6] to-[#9514FA] px-3  rounded-full mr-5 mb-12'>3</p>
                     </div>
-                    <div className=' space-y-4 mx-auto flex flex-col justify-center items-center'>
+                    <div className=' space-y-4  mx-auto flex flex-col justify-center items-center'>
                         <img src={roketplayer} className='w-20 
                         h-20 bg-purple-200 rounded-full p-2' alt="roket" />
                     <h2 className='text-2xl font-bold'>Start Creating</h2>

@@ -6,7 +6,7 @@ const AvailableCard = ({products ,count, setCount, selectedProducts, setSelected
     return (
         <div className='px-20'>
 
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-3'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 '>
                 {
                 products.map( (products)=>  {
                  

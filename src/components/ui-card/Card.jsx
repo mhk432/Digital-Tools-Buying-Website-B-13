@@ -20,7 +20,11 @@ const Card = ({ products, setCount, selectedProducts, setSelectedProducts }) => 
 
 
   return (
-    <div className="card w-96 bg-base-100 shadow-stone-400 rounded-md mb-5 ">
+    <div className="card w-full bg-base-100 shadow-stone-400 rounded-2xl  
+      mb-5  ">
+
+        
+
       <div className="card-body   hover:bg-blue-100 
        hover:shadow-lg 0 transition-shadow relative
        ">
@@ -61,13 +65,15 @@ const Card = ({ products, setCount, selectedProducts, setSelectedProducts }) => 
 
         </ul>
         <div className="mt-6">
-          <button className={`btn btn-block rounded-full btn-primary shadow shadow-gray-700 ${
+          <button className={`btn btn-block rounded-full bg-gradient-to-r
+          from-[#4F39F6] to-[#9514FA] text-white shadow ${
     clicked ? "bg-green-500 text-white" : ""
   }`}
             onClick={handleAddToCart}
             disabled={clicked}> {clicked ? "Added-to-Cart" : "Buy Now"}</button>
         </div>
       </div>
+        
     </div>
   );
 };
