@@ -3,15 +3,16 @@ import { toast } from "react-toastify";
 
 
 
-const Card = ({ products, setCount, }) => {
+const Card = ({ products, setCount, selectedProducts, setSelectedProducts }) => {
   const [clicked, setClicked] = useState(false);
 
   const handleAddToCart = () => {
       
-    toast.success(`${products.name} added to cart`);
+    toast.success(`${products.name}added to cart successfully!` );
     if (clicked) return;
     setCount(count => count + 1);
     setClicked(true);
+    setSelectedProducts([...selectedProducts, products]);
   }
 
 

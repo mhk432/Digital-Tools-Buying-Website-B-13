@@ -3,11 +3,14 @@ import AvailableCard from '../selected/AvailableCard';
 import SelactedCard from '../selected/SelactedCard';
 
 
-const Products = ({productPromise ,count, setCount}) => {
+const Products = ({productPromise ,count, setCount, price}) => {
     const data=use(productPromise);
     const products = data.products;
 
     const [selectedType, setselectedType] = useState('available');
+          
+    const [selectedProducts, setSelectedProducts] = useState([]);
+
     return (
         <div>
 
@@ -28,13 +31,16 @@ const Products = ({productPromise ,count, setCount}) => {
                         onClick={() => setselectedType('Selected')} className={`btn
              ${selectedType === 'Selected'
         ? "bg-gradient-to-r text-white from-[#4F39F6]  to-[#9514FA]" : " text-black"}  
-                  rounded-r-full font-bold text-blue-700`}>({count})/{products.length} Card</button>
+                  rounded-r-full font-bold text-blue-700`}>
+                     Card ({count}/{products.length})</button>
                 </div>
             </div>
             {selectedType === "available" ? <AvailableCard
-            count={count} setCount={setCount} products={products}>
-
-            </AvailableCard > :<SelactedCard></SelactedCard>}
+            count={count} setCount={setCount} products={products}
+            selectedProducts={selectedProducts} setSelectedProducts={setSelectedProducts} >
+                 </AvailableCard > :<SelactedCard price={price} count={count} 
+            setCount={setCount}  selectedProducts={selectedProducts} 
+            setSelectedProducts={setSelectedProducts} ></SelactedCard>}
         </div>
 
 

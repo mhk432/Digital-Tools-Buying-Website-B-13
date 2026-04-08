@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../ui-card/Card';
 
-const AvailableCard = ({products ,count, setCount}) => {
+const AvailableCard = ({products ,count, setCount, selectedProducts, setSelectedProducts}) => {
     
     return (
         <div className='px-20'>
@@ -13,7 +13,8 @@ const AvailableCard = ({products ,count, setCount}) => {
                     
                  
                 return <Card key={products.id}
-                   products={products} setCount={setCount} count={count}></Card>
+                   products={products} setCount={setCount} count={count} 
+                   selectedProducts={selectedProducts} setSelectedProducts={setSelectedProducts}></Card>
                   })
                }
             </div>
