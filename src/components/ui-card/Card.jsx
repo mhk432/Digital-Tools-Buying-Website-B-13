@@ -7,8 +7,10 @@ const Card = ({ products, setCount, selectedProducts, setSelectedProducts }) => 
   const [clicked, setClicked] = useState(false);
 
   const handleAddToCart = () => {
-      
-    toast.success(`${products.name}added to cart successfully!` );
+
+    toast.success(`${products.name}added to cart successfully!`),{
+       position: "top-right",
+    };
     if (clicked) return;
     setCount(count => count + 1);
     setClicked(true);
@@ -23,7 +25,7 @@ const Card = ({ products, setCount, selectedProducts, setSelectedProducts }) => 
     <div className="card w-full bg-base-100 shadow-stone-400 rounded-2xl  
       mb-5  ">
 
-        
+
 
       <div className="card-body   hover:bg-blue-100 
        hover:shadow-lg 0 transition-shadow relative
@@ -65,15 +67,20 @@ const Card = ({ products, setCount, selectedProducts, setSelectedProducts }) => 
 
         </ul>
         <div className="mt-6">
-          <button className={`btn btn-block rounded-full bg-gradient-to-r
-          from-[#4F39F6] to-[#9514FA] text-white shadow ${
-    clicked ? "bg-green-500 text-white" : ""
-  }`}
+          <button
+            className={`btn btn-block rounded-full text-white shadow h-12 
+       ${clicked
+                ? "bg-green-500 scale-95 transition-transform duration-2000"
+                : "bg-gradient-to-r from-[#4F39F6] to-[#9514FA]"
+              }`}
             onClick={handleAddToCart}
-            disabled={clicked}> {clicked ? "Added-to-Cart" : "Buy Now"}</button>
+            disabled={clicked}
+          >
+            {clicked ? "Added to Cart" : "Buy Now"}
+          </button>
         </div>
       </div>
-        
+
     </div>
   );
 };

@@ -9,6 +9,8 @@ import Products from './components/products/Products'
 import { ToastContainer } from 'react-toastify'
 import TransparentPricing from './components/Transparent Pricing/TransparentPricing'
 import RedayTranceFrom from './components/RedytoTranceFrom/RedayTranceFrom'
+import Footer from './components/Footer'
+
 
 
 
@@ -36,6 +38,8 @@ function App() {
       <Card3section></Card3section>
       <TransparentPricing></TransparentPricing>
       <RedayTranceFrom></RedayTranceFrom>
+          
+          <Footer></Footer>
 
 
            <ToastContainer />

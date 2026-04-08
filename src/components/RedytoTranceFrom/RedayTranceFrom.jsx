@@ -4,7 +4,7 @@ const RedayTranceFrom = () => {
     return (
         <div className=' bg-gradient-to-r
           from-[#4F39F6] to-[#9514FA]'>
-            <div className='mx-auto text-center my-10 p-10 mx-20 
+            <div className='mx-auto text-center  p-10 mx-20 
              '>
                    <h1 className='text-4xl font-extrabold 
                    text-center text-white'>Ready to Transform Your Digital Workflow</h1>
